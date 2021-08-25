@@ -38,5 +38,6 @@ using Salt.
 Log into the Salt Minion and test simple web server.
 
 .. code-block:: bash
+
     vagrant ssh minion1
     curl localhost:5000
