@@ -1,0 +1,9 @@
+[program:myservice]
+command = {{ myservice.dirs.home }}/myservice.py
+autostart = true
+autorestart = true
+startsecs = 1
+stopwaitsecs = 1
+redirect_stderr = true
+stdout_logfile = {{ myservice.dirs.logs }}/myservice.out
+stdout_logfile_maxbytes = 0

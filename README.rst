@@ -3,7 +3,7 @@ Salt Vagrant Demo
 =================
 
 A Salt Demo using Vagrant.
-
+Salt state includes formulas for packages installation and simple web server deploy.
 
 Instructions
 ============
@@ -13,7 +13,7 @@ already be installed.
 
 .. code-block:: bash
 
-    git clone https://github.com/UtahDave/salt-vagrant-demo.git
+    git clone https://github.com/silazare/salt-vagrant-demo.git
     cd salt-vagrant-demo
     vagrant plugin install vagrant-vbguest
     vagrant up
@@ -32,4 +32,11 @@ using Salt.
 .. code-block:: bash
 
     vagrant ssh master
-    sudo salt \* test.ping
+    sudo salt '*' test.ping
+    sudo salt '*' state.apply
+
+Log into the Salt Minion and test simple web server.
+
+.. code-block:: bash
+    vagrant ssh minion1
+    curl localhost:5000
